@@ -36,6 +36,16 @@ p {
 }
 
 
+/*Home Page*/
+
+.home-main-title {
+    font-size: 60px;
+    color: Black;
+    font-weight:bold;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+}
+
 /*About Page*/
 
 .about-page-title {
@@ -44,7 +54,14 @@ p {
     color: rgb(207, 21, 21);
     padding-top: 1rem;
     padding-bottom: 3rem;
+}
 
+.contributor-title {
+    font-size: 40px;
+    font-weight:bold;
+    color: rgb(207, 21, 21);
+    margin-top: 2rem;
+    padding-bottom: 3rem;
 }
 
 /*Microorganism Index  Page*/
