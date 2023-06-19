@@ -64,6 +64,13 @@ p {
     padding-bottom: 3rem;
 }
 
+.UseCases-title{
+    font-size: 40px;
+    font-weight:bold;
+    color: rgb(207, 21, 21);
+    margin-top: 2rem;
+    padding-bottom: 3rem;
+}
 /*Microorganism Index  Page*/
 
 .title-pt-5 {
