@@ -1,153 +1,187 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #E8E3DE;
-    color: #ffffff;
-    min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background-color: #e8e3de;
+  color: #ffffff;
+  min-height: 100vh;
 }
 
 h1,
 h2,
 h3 {
-    color: black;
+  color: black;
 }
 
 .title {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    justify-content: center;
-    gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  justify-content: center;
+  gap: 30px;
 }
 
 .gallery .card {
-    transition: .1s linear;
+  transition: 0.1s linear;
 }
 
 .gallery .card:hover {
-    transform: scale(1.1);
-    z-index: 10;
+  transform: scale(1.1);
+  z-index: 10;
 }
 
 p {
-    font-size: 20px;
+  font-size: 20px;
 }
-
 
 /*Home Page*/
 
 .home-main-title {
-    font-size: 60px;
-    color: Black;
-    font-weight:bold;
-    padding-top: 5rem;
-    padding-bottom: 3rem;
-    text-align: center;
+  font-size: 60px;
+  color: Black;
+  font-weight: bold;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  text-align: center;
 }
 
 .banner-home-p {
-    background: url('../main_app/images/picture_banner_culture_homep.jpeg') center/cover no-repeat;
-    margin-top: 2rem;
-    width: 100%;
-    height: 60vh; 
+  background: url("../main_app/images/picture_banner_culture_homep.jpeg")
+    center/cover no-repeat;
+  margin-top: 2rem;
+  width: 100%;
+  height: 60vh;
 }
 
 .paragraph-home {
-    font-size: 30px;
-    font-weight: bold;
-    margin-left: 0rem;
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 0rem;
 }
 
-.sous-banner-home{
-    background-color: #ffffff;
-    margin-bottom: 1rem;
-    display: flex;
-    justify-content: space-between;
+.sous-banner-home {
+  background-color: #ffffff;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
 }
 
-.right-side-banner{
-    background-color: white;
-    padding: 4rem;
+.left-side-banner {
+  background-color: white;
+  padding: 4rem;
 }
 
 .learn-more-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: white;
-    color: black;
-    border: 2px solid black;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 50px;
-    margin-top: 2rem;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 50px;
+  margin-top: 2rem;
 }
 
 .learn-more-btn:hover {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
 
 .section-quote {
-    width: 60%;
-    /* margin-left: 1rem; */
-    font-weight: bold;
-    font-style: italic;
-    text-align: center;
-    background-color: #CABDB5;
-    padding: 4rem;
+  width: 60%;
+  /* margin-left: 1rem; */
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  background-color: #cabdb5;
+  padding: 4rem;
 }
 
 .quote {
-    color: white;
-    margin-bottom: 1rem;
-    font-size: 25px;
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 25px;
 }
 
 .author-name {
-    color: white;
+  color: white;
 }
 
 .author-description {
-    color: white;
-    font-size: 14px;
-    padding-bottom: 1rem;
+  color: white;
+  font-size: 14px;
+  padding-bottom: 1rem;
 }
-
-
 
 /*About Page*/
 
+.top-section{
+    text-align: justify;
+    width: 50%;
+    
+}
 .about-page-title {
-    font-size: 40px;
-    font-weight:bold;
-    color: rgb(207, 21, 21);
-    padding-top: 1rem;
-    padding-bottom: 3rem;
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(207, 21, 21);
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+
+.middle-section {
+  /* background-color: white; */
+  padding: 2rem;
+  margin-top: 2rem;
+  text-align: justify;
+}
+
+.left-side-image {
+    padding: 5rem;
+    width :50%;
+    
+}
+
+.right-side-paragraph{
+    background-color: white;
+    padding: 5rem;
+    width :50%;
+    /* padding: 2rem; */
+}
+
+.contributor-section {
+    display: flex;
+    align-items: center;
 }
 
 .contributor-title {
-    font-size: 40px;
-    font-weight:bold;
-    color: rgb(207, 21, 21);
-    margin-top: 2rem;
-    padding-bottom: 3rem;
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(207, 21, 21);
+  /* margin-top: 2rem; */
+  padding-bottom: 3rem;
 }
 
-.UseCases-title{
-    font-size: 40px;
-    font-weight:bold;
-    color: rgb(207, 21, 21);
-    margin-top: 2rem;
-    padding-bottom: 3rem;
+.UseCases-title {
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(207, 21, 21);
+  margin-top: 2rem;
+  padding-bottom: 3rem;
 }
 /*Microorganism Index  Page*/
 
 .title-pt-5 {
-    font-size: 40px;
-    font-weight:bold;
-    color: rgb(207, 21, 21); 
-    padding-top: 1rem;
-    padding-bottom: 3rem;
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(207, 21, 21);
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+
+.UseCases-section{
+    text-align: justify;
+    padding-bottom: 4rem;
+    width :50%;
 }
