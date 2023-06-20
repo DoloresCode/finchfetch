@@ -52,29 +52,51 @@ p {
     margin-top: 2rem;
     width: 100%;
     height: 60vh; 
-
 }
 
 .paragraph-home {
     font-size: 30px;
     font-weight: bold;
-    margin-left: 5rem;
+    margin-left: 0rem;
 }
 
 .sous-banner-home{
     background-color: #ffffff;
     margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-side-banner{
+    background-color: white;
+    padding: 4rem;
+}
+
+.learn-more-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    margin-top: 2rem;
+}
+
+.learn-more-btn:hover {
+    background-color: black;
+    color: white;
 }
 
 .section-quote {
     width: 60%;
-    margin-left: 1rem;
-    margin-top: 1%;
+    /* margin-left: 1rem; */
     font-weight: bold;
     font-style: italic;
     text-align: center;
-    background-color: #9A0000;
-    padding: 6rem;
+    background-color: #CABDB5;
+    padding: 4rem;
 }
 
 .quote {
@@ -92,6 +114,7 @@ p {
     font-size: 14px;
     padding-bottom: 1rem;
 }
+
 
 
 /*About Page*/
