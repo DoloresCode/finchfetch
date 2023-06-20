@@ -51,13 +51,34 @@ p {
     background: url('../main_app/images/picture_banner_culture_homep.jpeg') center/cover no-repeat;
     margin-top: 2rem;
     width: 100%;
-    height: 100vh; 
+    height: 60vh; 
 }
 
 .paragraph-home {
     font-size: 30px;
     font-weight: bold;
-    margin-left: 2rem;;
+    margin-left: 5rem;
+}
+
+.sous-banner-home{
+    background-color: #ffffff;
+}
+
+.section-quote {
+    width: 50%;
+    margin-left: 5rem;
+    margin-top: 10%;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.quote {
+    color: black;
+    margin-bottom: 1rem;
+}
+
+.author-name{
+    color: black;
 }
 
 /*About Page*/
