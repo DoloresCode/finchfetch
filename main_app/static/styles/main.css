@@ -52,6 +52,7 @@ p {
     margin-top: 2rem;
     width: 100%;
     height: 60vh; 
+
 }
 
 .paragraph-home {
@@ -62,24 +63,36 @@ p {
 
 .sous-banner-home{
     background-color: #ffffff;
-}
-
-.section-quote {
-    width: 50%;
-    margin-left: 5rem;
-    margin-top: 10%;
-    font-weight: bold;
-    font-style: italic;
-}
-
-.quote {
-    color: black;
     margin-bottom: 1rem;
 }
 
-.author-name{
-    color: black;
+.section-quote {
+    width: 60%;
+    margin-left: 1rem;
+    margin-top: 1%;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    background-color: #9A0000;
+    padding: 6rem;
 }
+
+.quote {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 25px;
+}
+
+.author-name {
+    color: white;
+}
+
+.author-description {
+    color: white;
+    font-size: 14px;
+    padding-bottom: 1rem;
+}
+
 
 /*About Page*/
 
