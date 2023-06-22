@@ -1,16 +1,20 @@
 from django.db import models
 
 # Create your models here.
-class Artist(models.Model):
-
-    name = models.CharField(max_length=100)
+class Microorganism(models.Model):
+    name = models.CharField(max_length=200)
     img = models.CharField(max_length=250)
-    bio = models.TextField(max_length=500)
-    verified_artist = models.BooleanField(default=True)
+    characteristics = models.TextField(max_length=1000)
+    description = models.TextField(max_length=1000)
+    manifestation = models.TextField(max_length=1000)
+    laboratory_diagnosis = models.TextField(max_length=1000)
+    verified_microorganism = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
-        return self.name
+        return "Microorganism: " + self.name
 
     class Meta:
-        ordering = ['name']
+        ordering = ['name'] 
+
+
