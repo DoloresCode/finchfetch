@@ -5,5 +5,6 @@ urlpatterns = [
     path('', views.Home.as_view(), name='home'), 
     path('about/', views.About.as_view(), name='about'), 
     path('microorganisms/', views.MicroorganismIndex.as_view(), name='microorganism_index'),
-    path('microorganisms/new/', views.MicroorganismCreate.as_view(), name="microorganism_create")
+    path('microorganisms/new/', views.MicroorganismCreate.as_view(), name="microorganism_create"),
+    path('microorganisms/<int:pk>/', views.MicroorganismDetail.as_view(), name="microorganism_detail"),
 ]

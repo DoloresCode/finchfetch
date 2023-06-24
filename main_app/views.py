@@ -4,6 +4,7 @@ from .models import Microorganism
 from django.http import HttpResponse 
 from django.views.generic.edit import CreateView
 from django.views.generic.base import TemplateView
+from django.views.generic import DetailView
 
 # Create your views here.
 class Home(TemplateView):
@@ -51,3 +52,7 @@ class MicroorganismIndex(TemplateView):
         else:
             context["microorganisms"] = Microorganism.objects.all()
         return context
+    
+class MicroorganismDetail(DetailView):
+    model = Microorganism
+    template_name = "microorganism_detail.html"
