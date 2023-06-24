@@ -57,6 +57,12 @@ class MicroorganismDetail(DetailView):
     model = Microorganism
     template_name = "microorganism_detail.html"
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        
+        return context
+    
 class MicroorganismUpdate(UpdateView):
     model = Microorganism
     fields = ['name', 'img', 'characteristics', 'description', 'manifestation', 'laboratory_diagnosis', 'verified_microorganism']
