@@ -20,6 +20,7 @@
     <!--  This anchor tag will redirect back to microorganism index without a query param -->
     <a class="button is-dark" href="{% url 'microorganism_index' %}">Clear Search</a>
   </form>
+  <a class="button is-dark" href="{% url 'microorganism_create' %}">Add Microorganism</a>
 <div class="gallery">
   {% for microorganism in microorganisms %}
   <a href="">

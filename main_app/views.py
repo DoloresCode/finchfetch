@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views import View
 from .models import Microorganism
 from django.http import HttpResponse 
+from django.views.generic.edit import CreateView
 from django.views.generic.base import TemplateView
 
 # Create your views here.
@@ -29,6 +30,11 @@ class About(TemplateView):
 #     Microorganism("Treponema pallidum", "https://cwoer.ccbcmd.edu/science/microbiology/Lab%20Manual/lab1/images/Tpallidum03_scale.jpg", "Characteristics: ", "Description: ", "Manifestations: ", "Laboratory Diagnosis: "),            
 # ]
 
+class MicroorganismCreate(CreateView):
+    model = Microorganism
+    fields = ['name', 'img', 'characteristics', 'description', 'manifestation', 'laboratory_diagnosis', 'verified_microorganism']
+    template_name = "microorganism_create.html"
+    success_url = "/microorganisms/"
 
 class MicroorganismIndex(TemplateView):
     template_name = "microorganism_index.html"
