@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views import View
 from .models import Microorganism
 from django.http import HttpResponse 
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.base import TemplateView
 from django.views.generic import DetailView
 
@@ -56,3 +56,14 @@ class MicroorganismIndex(TemplateView):
 class MicroorganismDetail(DetailView):
     model = Microorganism
     template_name = "microorganism_detail.html"
+
+class MicroorganismUpdate(UpdateView):
+    model = Microorganism
+    fields = ['name', 'img', 'characteristics', 'description', 'manifestation', 'laboratory_diagnosis', 'verified_microorganism']
+    template_name = "microorganism_update.html"
+    success_url = "/microorganisms/"
+
+class MicroorganismDelete(DeleteView):
+    model = Microorganism
+    template_name = "microorganism_delete_confirmation.html"
+    success_url = "/microorganisms/"
