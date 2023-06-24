@@ -2,8 +2,8 @@ from django.db import models
 
 # Create your models here.
 class Microorganism(models.Model):
-    name = models.CharField(max_length=200)
-    img = models.CharField(max_length=250)
+    name = models.CharField(max_length=400)
+    img = models.CharField(max_length=600)
     characteristics = models.TextField(max_length=1000)
     description = models.TextField(max_length=1000)
     manifestation = models.TextField(max_length=1000)
