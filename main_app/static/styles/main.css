@@ -353,6 +353,35 @@ img {
   color: #ffffff;
 }
 
+.detail__culture_medias {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #e8e3de;
+  color: black;
+}
+
+.title.is-3 {
+  color: black;
+}
+
+.culture_media {
+  width: 100%;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 0.1fr 3fr 1fr;
+  border-radius: 5px;
+}
+
+
+.culture_media:hover {
+  background-color: hsla(0, 0%, 100%, 0.1);
+  cursor: pointer;
+}
+
+
+
+
 /* Delete Page */
 
 .delete-page-container {

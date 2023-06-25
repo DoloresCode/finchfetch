@@ -14,6 +14,7 @@
     {% endif %}
     <h1 class="title">{{microorganism.name}}</h1>
   </div>
+
   <div class="detail__container">
     <div class="buttons">
       <a
@@ -33,6 +34,26 @@
         </span>
       </a>
     </div>
+
+    <div class="detail__culture_medias mb-5">
+      <h3 class="title is-3 has-text-othercolor">Culture Medias</h3>
+
+      {% for culture_media in microorganism.culture_medias.all %}
+      <div class="culture_media">
+        <span>{{forloop.counter}}</span>
+        <span><b>{{culture_media.name}}</b></span>
+        <span>{{culture_media.description}}</span>
+      </div>
+      {% empty %}
+      <article class="message">
+        <div class="message-header">
+          <p>No Culture Medias Available</p>
+        </div>
+      </article>
+
+      {% endfor %}
+    </div>
+
     <div class="detail__about">
       <h4 class="title is-4">About</h4>
       <p>{{microorganism.description}}</p>
