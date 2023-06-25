@@ -348,6 +348,11 @@ img {
   font-size: 18px;
 }
 
+.control .button.is-success {
+  background-color: #3498db;
+  color: #ffffff;
+}
+
 /* Delete Page */
 
 .delete-page-container {
