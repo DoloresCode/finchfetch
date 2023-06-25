@@ -347,3 +347,54 @@ img {
 .detail__about p {
   font-size: 18px;
 }
+
+/* Delete Page */
+
+.delete-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.delete-page-image {
+  max-width: 300px;
+  margin-bottom: 2rem;
+}
+
+.delete-page-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(207, 21, 21);
+  margin-bottom: 2rem;
+}
+
+.buttons {
+  margin-top: 2rem;
+}
+
+.buttons .button {
+  margin-right: 1rem;
+}
+
+.picture-delete-p {
+  background: url("../main_app/images/picture_delete-phogocytose-Mycobacterium tuberculosis.jpeg")
+    center/cover no-repeat;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 60vh;
+}
+
+.buttons .button.is-danger {
+  background-color: #e74c3c;
+  color: #ffffff;
+}
+
+.buttons .button.is-primary {
+  background-color: #3498db;
+  color: #ffffff;
+}
