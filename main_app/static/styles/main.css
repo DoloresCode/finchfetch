@@ -41,7 +41,7 @@ p {
   margin-bottom: 5rem;
 }
 
-.detail__img {
+/* .detail__img {
   position: absolute;
   left: 0;
   top: 0;
@@ -77,7 +77,7 @@ img {
 
 .detail__container {
   margin-top: 500px;
-}
+} */
 
 /*Home Page*/
 
@@ -103,6 +103,7 @@ img {
   font-weight: bold;
   margin-left: 0rem;
 }
+
 
 .sous-banner-home {
   background-color: #ffffff;
@@ -189,6 +190,10 @@ img {
   width: 50%;
 }
 
+/*.left-side-image img {
+  display: block;
+}*/ /* Have to see is it will be ok later with image*/
+
 .right-side-paragraph {
   background-color: white;
   padding: 5rem;
@@ -220,7 +225,8 @@ img {
   width: 50%;
   background-color: #cabdb5;
 }
-/*Microorganism Index  Page*/
+
+/*Microorganism Index Page*/
 
 .title-pt-5 {
   font-size: 40px;
@@ -238,3 +244,106 @@ img {
   padding: 5rem;
 }
 
+/*Microorganism Detail Page*/
+
+.detail__img {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.img {
+  width: 100%;
+  height: 500px;
+}
+
+.detail__container {
+  margin-top: 1rem;
+}
+
+.title {
+  margin-top: 1rem;
+}
+
+.icon-text {
+  font-size: 25px;
+  padding-top: 1rem;
+}
+
+.brown-container {
+  background-color: #cabdb5;
+}
+
+.detail__name, .detail__container {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding-bottom: 2rem;
+}
+
+.detail__img {
+  position: relative;
+  height: 600px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.detail__img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+}
+
+.detail__img img {
+  max-width: 100%; 
+  max-height: 100%; 
+  object-fit: contain; 
+  object-position: center; 
+}
+
+.detail__name {
+  text-align: center;
+  padding: 2rem;
+}
+
+.detail__name .icon-text {
+  font-size: 25px;
+  padding-top: 1rem;
+}
+
+.detail__name h1.title {
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(207, 21, 21);
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.detail__container {
+  padding: 2rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.detail__about {
+  text-align: justify;
+}
+
+.detail__about h4.title.is-4 {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(207, 21, 21);
+  margin-bottom: 1rem;
+}
+
+.detail__about p {
+  font-size: 18px;
+}
