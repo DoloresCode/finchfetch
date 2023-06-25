@@ -18,3 +18,11 @@ class Microorganism(models.Model):
         ordering = ['name'] 
 
 
+class CultureMedia(models.Model):
+    name = models.CharField(max_length=200)
+    description = models.TextField(max_length=600)
+    microorganism = models.ForeignKey(Microorganism, on_delete=models.CASCADE, related_name="culture_medias")
+
+    def __str__(self):
+        return self.name
+
