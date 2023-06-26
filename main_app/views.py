@@ -1,6 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import redirect
 from django.views import View
-from .models import Microorganism
+from .models import Microorganism, CultureMedia
 from django.http import HttpResponse 
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.base import TemplateView
@@ -60,7 +60,7 @@ class MicroorganismDetail(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
-        
+
         return context
     
 class MicroorganismUpdate(UpdateView):
@@ -73,3 +73,14 @@ class MicroorganismDelete(DeleteView):
     model = Microorganism
     template_name = "microorganism_delete_confirmation.html"
     success_url = "/microorganisms/"
+
+class CultureMediaCreate(View):
+    
+    def post(self, request, pk):
+        name = request.POST.get("name")
+        description = request.POST.get("description")
+        microorganism = Microorganism.objects.get(pk=pk)
+        CultureMedia.objects.create(name=name, description=description, microorganism = microorganism)
+        return redirect('microorganism_detail', pk=pk)
+    
+   
