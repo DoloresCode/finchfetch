@@ -304,6 +304,7 @@ img {
   max-height: 100%; 
   object-fit: contain; 
   object-position: center; 
+  
 }
 
 .detail__name {
@@ -384,8 +385,21 @@ img {
   cursor: pointer;
 }
 
+.button.is-primary.is-disabled {
+  background-color: #3498db;
+  color: #ffffff;
+}
 
+.mb-5.form-add-culture-media {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 1vh;  
+  padding: 1em;
+  box-sizing: border-box;
 
+}
 
 /* Delete Page */
 

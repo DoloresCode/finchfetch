@@ -34,10 +34,42 @@
         </span>
       </a>
     </div>
-
     <div class="detail__culture_medias mb-5">
       <h3 class="title is-3 has-text-othercolor">Culture Medias</h3>
-
+      <form
+        class="mb-5 form-add-culture-media"
+        action="{% url 'culture_media_create' microorganism.pk %}"
+        method="post"
+      >
+        {% csrf_token %}
+        <div class="field has-addons">
+          <div class="control">
+            <input
+              class="input"
+              type="text"
+              name="name"
+              placeholder="name"
+              required
+            />
+          </div>
+          <div class="control">
+            <input
+              class="input"
+              type="text"
+              name="description"
+              placeholder="description"
+              required
+            />
+          </div>
+          <div class="control">
+            <input
+              class="button is-primary is-disabled"
+              type="submit"
+              value="Add Culture Media"
+            />
+          </div>
+        </div>
+      </form>
       {% for culture_media in microorganism.culture_medias.all %}
       <div class="culture_media">
         <span>{{forloop.counter}}</span>
