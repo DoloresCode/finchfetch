@@ -2,6 +2,7 @@
 
 <h1 class="title-pt-5">Favorites Microorganisms</h1>
 
+<div class="button-container">
   <form class="mb-5" method="get">
     <div class="field has-addons">
       <div class="control">
@@ -28,6 +29,7 @@
       >Add Microorganism</a
     >
   </div>
+</div>
 <div class="gallery">
   {% for microorganism in microorganisms %}
   <a href="{% url 'microorganism_detail' microorganism.pk %}">
