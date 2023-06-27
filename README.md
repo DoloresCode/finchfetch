@@ -8,6 +8,15 @@ Finchfetch Microorganisms is a database of microorganisms aimed at providing val
 
 ## Wireframes
 
+<img width="926" alt="finchfetch_microorganisms-homepage" src="https://github.com/DoloresCode/EchoBeats/assets/117631390/d6a8f5a7-99bd-44ae-b808-96d197e045a6">
+
+<img width="844" alt="finchfetch_microorganisms-Index" src="https://github.com/DoloresCode/EchoBeats/assets/117631390/4980ea1e-7470-4096-b753-a9f7b57b444f">
+
+<img width="821" alt="finchfetch_microorganisms-Indexfinchfetch_microorganisms-detail" src="https://github.com/DoloresCode/EchoBeats/assets/117631390/1bad774b-de72-4a93-b617-26ed76f26d37">
+
+<img width="846" alt="finchfetch_microorganisms-update Candida albicans" src="https://github.com/DoloresCode/EchoBeats/assets/117631390/223c53ea-2a69-4171-83d8-5223f8566071">
+
+
 
 ## Technologies
 
