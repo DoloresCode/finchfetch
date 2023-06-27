@@ -1,29 +1,33 @@
-{% extends 'base.html' %} {% block title %}Microorganism{% endblock %} 
-
-{% block content %}
+{% extends 'base.html' %} {% block title %}Microorganism{% endblock %} {% block content %}
 
 <h1 class="title-pt-5">Favorites Microorganisms</h1>
 
-<form class="mb-5" method="get">
-  <div class="field has-addons">
-    <div class="control">
-      <!-- Our input will search by name of microorganism  -->
-      <input class="input" type="text" name="name" placeholder="name" />
+  <form class="mb-5" method="get">
+    <div class="field has-addons">
+      <div class="control">
+        <!-- Our input will search by name of microorganism  -->
+        <input class="input" type="text" name="name" placeholder="name" />
+      </div>
+      <div class="control">
+        <input
+          class="button is-success custom-search-button"
+          type="submit"
+          value="Search"
+        />
+      </div>
     </div>
-    <div class="control">
-      <input class="button is-success custom-search-button" type="submit" value="Search" />
-    </div>
+    <!-- This anchor tag will redirect back to microorganism index without a query param -->
+    <a class="button is-dark" href="{% url 'microorganism_index' %}"
+      >Clear Search</a
+    >
+  </form>
+  <div class="mb-5">
+    <a
+      class="button is-dark add-microorga-idx"
+      href="{% url 'microorganism_create' %}"
+      >Add Microorganism</a
+    >
   </div>
-  <!-- This anchor tag will redirect back to microorganism index without a query param -->
-  <a class="button is-dark" href="{% url 'microorganism_index' %}"
-    >Clear Search</a
-  >
-</form>
-<div class="mb-5">
-  <a class="button is-dark" href="{% url 'microorganism_create' %}"
-    >Add Microorganism</a
-  >
-</div>
 <div class="gallery">
   {% for microorganism in microorganisms %}
   <a href="{% url 'microorganism_detail' microorganism.pk %}">

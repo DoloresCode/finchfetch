@@ -41,44 +41,6 @@ p {
   margin-bottom: 5rem;
 }
 
-/* .detail__img {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 500px;
-  background-color: #ffffff;
-  overflow: hidden;
-}
-
-.detail__img::after {
-  content: "";
-  background-image: linear-gradient(transparent 60%, #1f1f1f);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 5;
-}
-
-img {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-  object-position: top;
-}
-
-.detail__name {
-  position: absolute;
-  z-index: 5;
-  top: 400px;
-}
-
-.detail__container {
-  margin-top: 500px;
-} */
-
 /*Home Page*/
 
 .home-main-title {
@@ -296,7 +258,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05));
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05));
 }
 
 .detail__img img {
@@ -304,7 +266,7 @@ img {
   max-height: 100%; 
   object-fit: contain; 
   object-position: center; 
-  
+
 }
 
 .detail__name {
@@ -338,7 +300,10 @@ img {
   text-align: justify;
 }
 
-.detail__about h4.title.is-4 {
+.detail__about h4.title.is-4,
+.detail__characteristics h4.title.is-4,
+.detail__manifestation h4.title.is-4,
+.detail__laboratory_diagnosis h4.title.is-4 {
   font-size: 20px;
   font-weight: bold;
   color: rgb(207, 21, 21);
@@ -346,8 +311,12 @@ img {
   margin-bottom: 1rem;
 }
 
-.detail__about p {
+.detail__about p,
+.detail__characteristics p,
+.detail__manifestation p,
+.detail__laboratory_diagnosis p {
   font-size: 18px;
+  color: black;
 }
 
 .control .button.is-success {
@@ -378,7 +347,6 @@ img {
   grid-template-columns: 0.1fr 2fr 3fr;
   border-radius: 5px;
 }
-
 
 .culture_media:hover {
   background-color: #c9bcad63;
@@ -451,3 +419,6 @@ img {
   background-color: #3498db;
   color: #ffffff;
 }
+
+/* Update Page */
+
