@@ -3,6 +3,7 @@ body {
   background-color: #e8e3de;
   color: #ffffff;
   min-height: 100vh;
+  padding-bottom: 6rem; 
 }
 
 h1,
@@ -623,6 +624,7 @@ p {
   bottom: 0;
   width: 100%;
   font-size: 14px;
+  margin-top: 4rem;
 }
 
 .footer a {
@@ -675,6 +677,7 @@ p {
   border-radius: 5px;
   background-color: #ffffff;
   color: #000000;
+  
 }
 
 .culture_media:hover {
