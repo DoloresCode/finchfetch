@@ -372,6 +372,37 @@ p {
   box-sizing: border-box;
 }
 
+
+
+/* Dropdown Styles */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-trigger {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+}
+
+.dropdown.is-active .dropdown-menu {
+  display: block;
+}
+
+.dropdown-content {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+}
+
+
+
 /* Delete Page */
 
 .delete-page-container {

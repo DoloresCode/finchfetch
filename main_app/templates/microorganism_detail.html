@@ -1,6 +1,8 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
+
+{% block content %}
 <div class="detail__img">
-  <img src="{{microorganism.img}}" alt="{{microorganism.name}}" />
+  <img src="{{ microorganism.img }}" alt="{{ microorganism.name }}" />
 </div>
 <div class="brown-container">
   <div class="detail__name">
@@ -12,23 +14,16 @@
       <span>Verified</span>
     </div>
     {% endif %}
-    <h1 class="title">{{microorganism.name}}</h1>
+    <h1 class="title">{{ microorganism.name }}</h1>
   </div>
-
   <div class="detail__container">
     <div class="buttons">
-      <a
-        href="{% url 'microorganism_update' microorganism.pk %}"
-        class="button is-info"
-      >
+      <a href="{% url 'microorganism_update' microorganism.pk %}" class="button is-info">
         <span class="icon">
           <i class="fas fa-edit"></i>
         </span>
       </a>
-      <a
-        href="{% url 'microorganism_delete' microorganism.pk %}"
-        class="button is-danger"
-      >
+      <a href="{% url 'microorganism_delete' microorganism.pk %}" class="button is-danger">
         <span class="icon">
           <i class="fas fa-trash-alt"></i>
         </span>
@@ -36,45 +31,46 @@
     </div>
     <div class="detail__culture_medias mb-5">
       <h3 class="title is-3 has-text-othercolor">Culture Medias</h3>
-      <form
-        class="mb-5 form-add-culture-media"
-        action="{% url 'culture_media_create' microorganism.pk %}"
-        method="post"
-      >
+      <form class="mb-5 form-add-culture-media" action="{% url 'culture_media_create' microorganism.pk %}" method="post">
         {% csrf_token %}
         <div class="field has-addons">
           <div class="control">
-            <input
-              class="input"
-              type="text"
-              name="name"
-              placeholder="name"
-              required
-            />
+            <input class="input" type="text" name="name" placeholder="name" required />
           </div>
           <div class="control">
-            <input
-              class="input"
-              type="text"
-              name="description"
-              placeholder="description"
-              required
-            />
+            <input class="input" type="text" name="description" placeholder="description" required />
           </div>
           <div class="control">
-            <input
-              class="button is-primary is-disabled"
-              type="submit"
-              value="Add Culture Media"
-            />
+            <input class="button is-primary is-disabled" type="submit" value="Add Culture Media" />
           </div>
         </div>
       </form>
       {% for culture_media in microorganism.culture_medias.all %}
       <div class="culture_media">
-        <span>{{forloop.counter}}</span>
-        <span><b>{{culture_media.name}}</b></span>
-        <span>{{culture_media.description}}</span>
+        <span>{{ forloop.counter }}</span>
+        <span><b>{{ culture_media.name }}</b></span>
+        <span>{{ culture_media.description }}</span>
+        <span>
+          <div class="dropdown">
+            <div class="dropdown-trigger">
+              <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                <span>Add to Morphological Classification</span>
+                <span class="icon is-small">
+                  <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+              </button>
+            </div>
+            <div class="dropdown-menu" id="dropdown-menu" role="menu">
+              <div class="dropdown-content">
+                {% for morphological_classification in morphological_classifications %}
+                <a href="{% url 'morphological_classification_culture_media_assoc' morphological_classification.pk culture_media.pk %}?assoc=add" class="dropdown-item">
+                  {{ morphological_classification.name }}
+                </a>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </span>
       </div>
       {% empty %}
       <article class="message">
@@ -82,25 +78,23 @@
           <p>No Culture Medias Available</p>
         </div>
       </article>
-
       {% endfor %}
     </div>
-
     <div class="detail__about">
       <h4 class="title is-4">About</h4>
-      <p>{{microorganism.description}}</p>
+      <p>{{ microorganism.description }}</p>
     </div>
     <div class="detail__characteristics">
       <h4 class="title is-4">Characteristics</h4>
-      <p>{{microorganism.characteristics}}</p>
+      <p>{{ microorganism.characteristics }}</p>
     </div>
     <div class="detail__manifestation">
       <h4 class="title is-4">Manifestation</h4>
-      <p>{{microorganism.manifestation}}</p>
+      <p>{{ microorganism.manifestation }}</p>
     </div>
     <div class="detail__laboratory_diagnosis">
       <h4 class="title is-4">Laboratory Diagnosis</h4>
-      <p>{{microorganism.laboratory_diagnosis}}</p>
+      <p>{{ microorganism.laboratory_diagnosis }}</p>
     </div>
   </div>
 </div>

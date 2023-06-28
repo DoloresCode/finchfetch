@@ -59,8 +59,7 @@ class MicroorganismDetail(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-
-
+        context["morphological_classifications"] = MorphologicalClassification.objects.all()
         return context
     
 class MicroorganismUpdate(UpdateView):
@@ -105,3 +104,5 @@ class MorphologicalClassificationCultureMediaAssoc(View):
             # add to the join table the given song_id
             MorphologicalClassification.objects.get(pk=pk).culture_medias.add(culture_media_pk)
         return redirect('collection')
+
+
