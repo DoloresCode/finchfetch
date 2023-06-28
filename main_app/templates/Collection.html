@@ -11,22 +11,6 @@
     <h3 class="title is-success custom-morp-class">
       {{morphological_classification.name}}
     </h3>
-    <hr />
-    <h2 class="culture-media-title">Culture Media</h2>
-    {% for culture_media in morphological_classification.culture_medias.all %}
-
-    <div class="culture_media">
-      <span>{{forloop.counter}}</span>
-      <span><b>{{culture_media.name}}</b></span>
-      <span>{{culture_media.description}}</span>
-      <a href="{% url 'morphological_classification_culture_media_assoc' morphological_classification.pk culture_media.pk %}?assoc=remove"
-                               class="button is-danger is-outlined">
-                                <span class="icon is-small">
-                                    <i class="fas fa-times"></i>
-                                </span>
-                            </a>
-                        </span>
-    </div>
 
     <span>
         <div class="dropdown">
@@ -49,6 +33,25 @@
           </div>
         </div>
       </span>
+
+    <hr />
+    <h2 class="culture-media-title">Culture Media</h2>
+    {% for culture_media in morphological_classification.culture_medias.all %}
+
+    <div class="culture_media">
+      <span>{{forloop.counter}}</span>
+      <span><b>{{culture_media.name}}</b></span>
+      <span>{{culture_media.description}}</span>
+      <a href="{% url 'morphological_classification_culture_media_assoc' morphological_classification.pk culture_media.pk %}?assoc=remove"
+                               class="button is-danger is-outlined">
+                                <span class="icon is-small">
+                                    <i class="fas fa-times"></i>
+                                </span>
+                            </a>
+                        </span>
+    </div>
+
+    
 
     {% endfor %}
   </div>
