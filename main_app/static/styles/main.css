@@ -606,3 +606,59 @@ p {
 /* .text-white {
   color: #ffffff;
 } */
+
+/* Collection page */
+
+.page-title-collection {
+  text-align: center;
+  padding: 1rem;
+  background-color: #cabdb5;
+  margin-bottom: 2rem;
+}
+
+.page-title-collection h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(207, 21, 21);
+  margin: 0;
+}
+
+.classification {
+  margin-bottom: 2rem;
+}
+
+.custom-morp-class {
+  font-size: 20px;
+  font-weight: bold;
+  color: #3498db;
+  margin: 0;
+}
+
+.culture_media {
+  display: grid;
+  grid-template-columns: 1fr 2fr 3fr;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.culture_media:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.morphological-class-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.628);
+}
+
+.culture-media-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.628);
+  margin-top: 2rem;
+}

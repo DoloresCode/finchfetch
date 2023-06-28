@@ -1,13 +1,17 @@
 {% extends 'base.html' %} {% block content %}
 <div class="home__classifications">
-  {% for morphological_classification in morphological_classifications %}
+    <div class="page-title-collection">
+        <h2>Culture Media by Morphological Classification</h2>
+      </div>
+  </div>
+  <h2 class="morphological-class-title">Morphological Class</h2> {% for morphological_classification in morphological_classifications %}
 
   <div class="classification mb-5">
-    <h3 class="title is-3 has-text-success">
+    <h3 class="title is-success custom-morp-class">
       {{morphological_classification.name}}
     </h3>
     <hr />
-
+    <h2 class="culture-media-title">Culture Media</h2>
     {% for culture_media in morphological_classification.culture_medias.all %}
 
     <div class="culture_media">
