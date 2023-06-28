@@ -1,6 +1,6 @@
 from django.shortcuts import redirect
 from django.views import View
-from .models import Microorganism, CultureMedia
+from .models import Microorganism, CultureMedia,  MorphologicalClassification
 from django.http import HttpResponse 
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.base import TemplateView
@@ -83,4 +83,10 @@ class CultureMediaCreate(View):
         CultureMedia.objects.create(name=name, description=description, microorganism = microorganism)
         return redirect('microorganism_detail', pk=pk)
     
-   
+class Collection(TemplateView):
+    template_name = "collection.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["morphological_classifications"] = MorphologicalClassification.objects.all()
+        return context

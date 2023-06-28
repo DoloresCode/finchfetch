@@ -66,7 +66,6 @@ p {
   margin-left: 0rem;
 }
 
-
 .sous-banner-home {
   background-color: #ffffff;
   margin-bottom: 1rem;
@@ -152,15 +151,10 @@ p {
   width: 50%;
 }
 
-/*.left-side-image img {
-  display: block;
-}*/ /* Have to see is it will be ok later with image*/
-
 .right-side-paragraph {
   background-color: white;
   padding: 5rem;
   width: 50%;
-  /* padding: 2rem; */
 }
 
 .contributor-section {
@@ -172,7 +166,6 @@ p {
   font-size: 40px;
   font-weight: bold;
   color: rgb(207, 21, 21);
-  /* margin-top: 2rem; */
   padding-bottom: 3rem;
 }
 
@@ -181,7 +174,6 @@ p {
   font-weight: bold;
   color: rgb(207, 21, 21);
   margin-top: -2rem;
-  /* padding-bottom: -2rem; */
   padding-top: 4rem;
   padding-left: 5rem;
   width: 50%;
@@ -208,12 +200,12 @@ p {
 
 .button-container {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   margin-bottom: 2rem;
 }
 
 .button.is-dark.add-microorga-idx {
-  margin-top: 51px; 
+  margin-top: 51px;
   margin-left: -5rem;
   padding: 1.2rem;
 }
@@ -248,7 +240,8 @@ p {
   margin-top: -1rem;
 }
 
-.detail__name, .detail__container {
+.detail__name,
+.detail__container {
   margin-left: 2rem;
   margin-right: 2rem;
   padding-bottom: 2rem;
@@ -256,7 +249,7 @@ p {
 
 .detail__img {
   position: relative;
-  height: 600px; 
+  height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -274,11 +267,10 @@ p {
 }
 
 .detail__img img {
-  max-width: 100%; 
-  max-height: 100%; 
-  object-fit: contain; 
-  object-position: center; 
-
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
 }
 
 .detail__name {
@@ -375,10 +367,9 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 1vh;  
+  min-height: 1vh;
   padding: 1em;
   box-sizing: border-box;
-
 }
 
 /* Delete Page */
@@ -467,7 +458,7 @@ p {
   font-size: 18px;
 }
 
-.update-form input[type='text'],
+.update-form input[type="text"],
 .update-form textarea {
   width: 100%;
   padding: 10px;
@@ -478,7 +469,7 @@ p {
   font-size: 16px;
 }
 
-.update-form input[type='submit'] {
+.update-form input[type="submit"] {
   display: block;
   width: 100%;
   padding: 10px;
@@ -490,7 +481,7 @@ p {
   border-radius: 4px;
 }
 
-.update-form input[type='submit']:hover {
+.update-form input[type="submit"]:hover {
   background-color: rgb(177, 18, 18);
 }
 
@@ -498,19 +489,19 @@ p {
   display: inline-block;
   margin-top: 1rem;
   padding: 10px 20px;
-  background-color: #3498db; 
+  background-color: #3498db;
   color: white;
   text-decoration: none;
   border-radius: 4px;
-  font-weight: bold; 
-  transition: background-color 0.3s ease; 
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .update-page-container a:hover {
-  background-color: #2980b9; 
+  background-color: #2980b9;
 }
 
-/* Create Microorganism Page */  
+/* Create Microorganism Page */
 /* Do same as update microorganism page*/
 
 .create-page-container {
@@ -546,7 +537,7 @@ p {
   font-size: 18px;
 }
 
-.create-form input[type='text'],
+.create-form input[type="text"],
 .create-form textarea {
   width: 100%;
   padding: 10px;
@@ -557,7 +548,7 @@ p {
   font-size: 16px;
 }
 
-.create-form input[type='submit'] {
+.create-form input[type="submit"] {
   display: block;
   width: 100%;
   padding: 10px;
@@ -569,7 +560,7 @@ p {
   border-radius: 4px;
 }
 
-.create-form input[type='submit']:hover {
+.create-form input[type="submit"]:hover {
   background-color: rgb(177, 18, 18);
 }
 
@@ -577,14 +568,41 @@ p {
   display: inline-block;
   margin-top: 1rem;
   padding: 10px 20px;
-  background-color: #3498db; 
+  background-color: #3498db;
   color: white;
   text-decoration: none;
   border-radius: 4px;
-  font-weight: bold; 
-  transition: background-color 0.3s ease; 
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .create-page-container a:hover {
-  background-color: #2980b9; 
+  background-color: #2980b9;
 }
+
+/* Base code */
+
+.footer {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+}
+
+.footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #e8e3de;
+}
+
+/* .text-white {
+  color: #ffffff;
+} */

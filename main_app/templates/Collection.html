@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% block content %}
+<div class="home__classifications">
+  {% for morphological_classification in morphological_classifications %}
+
+  <div class="classification mb-5">
+    <h3 class="title is-3 has-text-success">
+      {{morphological_classification.name}}
+    </h3>
+    <hr />
+
+    {% for culture_media in morphological_classification.culture_medias.all %}
+
+    <div class="culture_media">
+      <span>{{forloop.counter}}</span>
+      <span><b>{{culture_media.name}}</b></span>
+      <span>{{culture_media.description}}</span>
+    </div>
+
+    {% endfor %}
+  </div>
+
+  {% empty %}
+  <div class="morphological_classification mb-5">
+    "There are no culture medias for this morphological classification"
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
