@@ -635,8 +635,9 @@ p {
 }
 
 .culture_media {
+  width: 100%; 
   display: grid;
-  grid-template-columns: 1fr 2fr 3fr;
+  grid-template-columns: 0.1fr 0.5fr 2fr 0.2fr;
   gap: 10px;
   align-items: center;
   padding: 10px;
