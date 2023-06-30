@@ -80,7 +80,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'finchfetch_project.wsgi.application'
 
-CORS_ALLOWED_ORIGINS = True
 
 # To use Neon with Django, you have to create a Project on Neon and specify the project connection settings in your settings.py in the same way as for standalone Postgres.
 
@@ -90,7 +89,6 @@ DATABASES = {
         conn_max_age=600
     )
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
