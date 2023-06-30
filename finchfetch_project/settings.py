@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-# import dj_database_url
+import dj_database_url
 import environ
 environ.Env()
 environ.Env.read_env()
@@ -30,8 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='your secret key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = True
-# DEBUG = 'RENDER' not in os.environ
+DEBUG = 'RENDER' not in os.environ
 
 
 ALLOWED_HOSTS = []
@@ -60,7 +59,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    # 'corsheaders.middleware.CorsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -90,32 +89,30 @@ WSGI_APPLICATION = 'finchfetch_project.wsgi.application'
 
 # To use Neon with Django, you have to create a Project on Neon and specify the project connection settings in your settings.py in the same way as for standalone Postgres.
 
-# To use Neon with Django, you have to create a Project on Neon and specify the project connection settings in your settings.py in the same way as for standalone Postgres.
-
-DATABASES = {
-  'default': {
-    'ENGINE': 'django.db.backends.postgresql',
-    'NAME': 'Finchfetch_Microorganisms',
-    'USER': os.environ['DB_USER'],
-    'PASSWORD': os.environ['DB_PW'],
-    'HOST': os.environ['DB_HOST'],
-    'PORT': '5432',
-  }
-}
-
-
 
 # DATABASES = {
-#     'default': {
-#         'ENGINE': os.getenv('DB_ENGINE', 'django.db.backends.postgresql'),
-#         'NAME': os.getenv('DB_NAME', 'Finchfetch_Microorganisms'),
-#         'USER': os.getenv('DB_USER'),
-#         'PASSWORD': os.getenv('DB_PW'),
-#         'HOST': os.getenv('DB_HOST'),
-#         'PORT': os.getenv('DB_PORT', '5432'),
-#         'CONN_MAX_AGE': 600,
-#     }
+#   'default': {
+#     'ENGINE': 'django.db.backends.postgresql',
+#     'NAME': 'Finchfetch_Microorganisms',
+#     'USER': os.environ['DB_USER'],
+#     'PASSWORD': os.environ['DB_PW'],
+#     'HOST': os.environ['DB_HOST'],
+#     'PORT': '5432',
+#   }
 # }
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': os.getenv('DB_ENGINE', 'django.db.backends.postgresql'),
+        'NAME': os.getenv('DB_NAME', 'Finchfetch_Microorganisms'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PW'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': os.getenv('DB_PORT', '5432'),
+        'CONN_MAX_AGE': 600,
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
