@@ -3,9 +3,9 @@
     <div class="page-title-collection">
         <h2>Culture Media by Morphological Classification</h2>
       </div>
-  </div>
+  <!-- </div> -->
     
-  <h2 class="morphological-class-title">Morphological Class</h2> {% for morphological_classification in morphological_classifications %}
+  <!-- <h2 class="morphological-class-title">Morphological Class</h2> {% for morphological_classification in morphological_classifications %}
 
   <div class="classification mb-5">
     <h3 class="title is-success custom-morp-class">
@@ -23,13 +23,13 @@
             </button>
           </div>
           <div class="dropdown-menu" id="dropdown-menu" role="menu">
-            <!-- <div class="dropdown-content">
+            <div class="dropdown-content">
               {% for culture_media in culture_medias %}
               <a href="{% url 'morphological_classification_culture_media_assoc' morphological_classification.pk culture_media.pk %}?assoc=add" class="dropdown-item">
                 {{ culture_media.name }}
               </a>
               {% endfor %}
-            </div> -->
+            </div>
           </div>
         </div>
       </span>
@@ -38,7 +38,7 @@
     <h2 class="culture-media-title">Culture Media</h2>
     {% for culture_media in morphological_classification.culture_medias.all %}
 
-    <!-- <div class="culture_media">
+    <div class="culture_media">
       <span>{{forloop.counter}}</span>
       <span><b>{{culture_media.name}}</b></span>
       <span>{{culture_media.description}}</span>
@@ -49,7 +49,7 @@
                                 </span>
                             </a>
                         </span>
-    </div> -->
+    </div>
 
     
 
@@ -60,6 +60,6 @@
   <div class="morphological_classification mb-5">
     "There are no culture medias for this morphological classification"
   </div>
-  {% endfor %}
+  {% endfor %} -->
 </div>
 {% endblock %}
