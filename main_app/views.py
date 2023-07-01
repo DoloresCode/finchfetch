@@ -104,6 +104,6 @@ class MorphologicalClassificationCultureMediaAssoc(View):
             # get the playlist by the id and
             # add to the join table the given song_id
             MorphologicalClassification.objects.get(pk=pk).culture_medias.add(culture_media_pk)
-        return redirect('home')
+        return redirect('collections')
 
 
