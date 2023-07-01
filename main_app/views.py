@@ -85,25 +85,25 @@ class CultureMediaCreate(View):
 class Collection(TemplateView):
     template_name = "collection.html"
 
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     context["morphological_classifications"] = MorphologicalClassification.objects.all()
-    #     context["culture_medias"] = CultureMedia.objects.all()
-    #     return context
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["morphological_classifications"] = MorphologicalClassification.objects.all()
+        context["culture_medias"] = CultureMedia.objects.all()
+        return context
 
-# class MorphologicalClassificationCultureMediaAssoc(View):
+class MorphologicalClassificationCultureMediaAssoc(View):
 
-#     def get(self, request, pk, culture_media_pk):
-#         # get the query param from the url
-#         assoc = request.GET.get("assoc")
-#         if assoc == "remove":
-#             # get the morphological classification by the id and
-#             # remove from the join table the given culture_media_id
-#             MorphologicalClassification.objects.get(pk=pk).culture_medias.remove(culture_media_pk)
-#         if assoc == "add":
-#             # get the playlist by the id and
-#             # add to the join table the given song_id
-#             MorphologicalClassification.objects.get(pk=pk).culture_medias.add(culture_media_pk)
-#         return redirect('collection')
+    def get(self, request, pk, culture_media_pk):
+        # get the query param from the url
+        assoc = request.GET.get("assoc")
+        if assoc == "remove":
+            # get the morphological classification by the id and
+            # remove from the join table the given culture_media_id
+            MorphologicalClassification.objects.get(pk=pk).culture_medias.remove(culture_media_pk)
+        if assoc == "add":
+            # get the playlist by the id and
+            # add to the join table the given song_id
+            MorphologicalClassification.objects.get(pk=pk).culture_medias.add(culture_media_pk)
+        return redirect('collection')
 
 
