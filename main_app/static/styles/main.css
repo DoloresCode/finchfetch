@@ -202,10 +202,6 @@ p {
   margin-bottom: 2.5rem;
 }
 
-
-
-
-
 /*Microorganism Index Page*/
 
 .title-pt-5 {
@@ -650,6 +646,7 @@ p {
   width: 100%;
   font-size: 14px;
   margin-top: 4rem;
+  z-index: 20; /*so the card will not display above the footer*/
 }
 
 .footer a {
