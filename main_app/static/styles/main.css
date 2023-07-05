@@ -181,6 +181,31 @@ p {
   background-color: #cabdb5;
 }
 
+.UseCases-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom-about-image img {
+  width: 42%;
+  height: auto;
+  margin-left: 45rem;
+  margin-top: -50rem;
+  margin-bottom: 2.5rem;
+}
+
+.top-about-image img {
+  width: 42%;
+  height: auto;
+  margin-left: 45rem;
+  margin-top: -50rem;
+  margin-bottom: 2.5rem;
+}
+
+
+
+
+
 /*Microorganism Index Page*/
 
 .title-pt-5 {
