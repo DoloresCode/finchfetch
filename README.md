@@ -26,6 +26,8 @@ Finchfetch Microorganisms is a database of microorganisms aimed at providing val
 - PSQL
 - Python
 - Django
+- NEON
+- Render
 
 ## User Flow
 
