@@ -122,6 +122,52 @@ p {
   padding-bottom: 1rem;
 }
 
+
+/* Responsive layout for mobile view */
+@media (max-width: 768px) {
+
+  .home-main-title {
+    font-size: 50px;
+  }
+
+  .banner-home-p, .sous-banner-home {
+    width: 100%;
+    margin: 0; 
+    padding: 0; 
+  }
+
+  .sous-banner-home {
+    flex-direction: column; 
+  }
+
+  .left-side-banner, .section-quote {
+    padding: 1rem; 
+  }
+
+  .left-side-banner {
+    order: 1; 
+  }
+
+  .section-quote {
+    order: 2; 
+    padding: 1rem; 
+    margin: 0 auto; 
+  }
+
+  .quote {
+    font-size: 22px; 
+    max-width: 100%; 
+    margin: 0 auto; 
+  }
+}
+
+
+
+
+
+
+
+
 /*About Page*/
 
 .top-section {
