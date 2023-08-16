@@ -162,12 +162,6 @@ p {
 }
 
 
-
-
-
-
-
-
 /*About Page*/
 
 .top-section {
@@ -246,6 +240,54 @@ p {
   margin-left: 45rem;
   margin-top: -50rem;
   margin-bottom: 2.5rem;
+}
+
+
+
+/* Tablet devices (768px and up to 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .top-section, .left-side-image, .right-side-paragraph, .UseCases-title {
+    width: 70%;
+  }
+
+  .top-about-image img, .bottom-about-image img {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: -45rem;
+  }
+}
+
+/* Mobile devices (up to 767px) */
+@media only screen and (max-width: 767px) {
+  .top-section, .left-side-image, .right-side-paragraph, .UseCases-title {
+    width: 100%;
+    padding: 2.5rem;
+  }
+
+  .contributor-section {
+    flex-direction: column;
+  }
+
+  .left-side-image, .right-side-paragraph {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .top-about-image img, .bottom-about-image img {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 2rem;
+    margin-bottom: -3rem;
+  }
+
+  .UseCases-section {
+    width: 100% !important;  
+    background-color: #cabdb5; 
+    margin-bottom: -2rem; 
+  }
+  .UseCases-section p {
+    margin-top: -4rem;
+  }
 }
 
 /*Microorganism Index Page*/
